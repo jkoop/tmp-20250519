@@ -1,0 +1,31 @@
+$ pwd
+/home/joek/git/jkoop/tmp-20250519/main
+$ uname -a
+Linux RockPigeon 6.8.0-51-generic #52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+$ $HOME/Downloads/zig-linux-x86_64-0.15.0-dev.566+74a3ae492/zig build run
+initial client compression: null
+specific client compression: null
+Segmentation fault at address 0x3
+/home/joek/git/jkoop/tmp-20250519/main/src/main.zig:44:97: 0x10e180f in clientMessage (main)
+            std.debug.print("referenced client compression: {any}\n", .{connection.ws_connection.compression});
+                                                                                                ^
+/home/joek/git/jkoop/tmp-20250519/main/src/main.zig:15:33: 0x10e1c3f in main (main)
+    try connection.clientMessage("foo");
+                                ^
+/home/joek/Downloads/zig-linux-x86_64-0.15.0-dev.566+74a3ae492/lib/std/start.zig:671:37: 0x10e13d3 in posixCallMainAndExit (main)
+            const result = root.main() catch |err| {
+                                    ^
+/home/joek/Downloads/zig-linux-x86_64-0.15.0-dev.566+74a3ae492/lib/std/start.zig:282:5: 0x10e0f7d in _start (main)
+    asm volatile (switch (native_arch) {
+    ^
+???:?:?: 0x0 in ??? (???)
+run
+└─ run main failure
+error: the following command terminated unexpectedly:
+/home/joek/git/jkoop/tmp-20250519/main/zig-out/bin/main 
+Build Summary: 4/6 steps succeeded; 1 failed
+run transitive failure
+└─ run main failure
+error: the following build command failed with exit code 1:
+/home/joek/git/jkoop/tmp-20250519/main/.zig-cache/o/2e544e77c6ae4354de20e7e410c25272/build /home/joek/Downloads/zig-linux-x86_64-0.15.0-dev.566+74a3ae492/zig /home/joek/Downloads/zig-linux-x86_64-0.15.0-dev.566+74a3ae492/lib /home/joek/git/jkoop/tmp-20250519/main /home/joek/git/jkoop/tmp-20250519/main/.zig-cache /home/joek/.cache/zig --seed 0xdd622454 -Zc9593dc7ccd15809 run
+$ 
