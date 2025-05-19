@@ -1,6 +1,6 @@
 # tmp-20250519
 
-This project demonstrates a bug in the Zig compiler (as of 2025-05-19, 74a3ae492).
+This project demonstrates a bug in the Zig compiler (as of 2025-05-19, 74a3ae492). [tracking issue](https://github.com/ziglang/zig/issues/23932)
 
 **Expected output**
 

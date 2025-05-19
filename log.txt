@@ -2,6 +2,8 @@ $ pwd
 /home/joek/git/jkoop/tmp-20250519/main
 $ uname -a
 Linux RockPigeon 6.8.0-51-generic #52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+$ $HOME/Downloads/zig-linux-x86_64-0.15.0-dev.566+74a3ae492/zig version
+0.15.0-dev.566+74a3ae492
 $ $HOME/Downloads/zig-linux-x86_64-0.15.0-dev.566+74a3ae492/zig build run
 initial client compression: null
 specific client compression: null
